@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/styles.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="static/css/styles.min.css">-->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.11.3/datatables.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.11.3/datatables.min.js"></script>
+</head>
+
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">SARV HOPE</a></h1>
+
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="">Home</a></li>
+          <li><a class="nav-link scrollto" href="/view_all_children">View All Children</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#Literature_Survey">Literature Survey</a></li> -->
+          <li><a class="nav-link scrollto " href="/index">Child Registration</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#Research_Problem">Research Problem</a></li> -->
+          <li><a class="nav-link scrollto" href="/visualization">Data Visualization</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#Sub_objective">Sub objective</a></li> -->
+          <li><a class="nav-link scrollto" href="/Doc_All">Registered Doctors</a></li>
+          <!-- <li><a class="nav-link scrollto" href="">About Us</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="">Contact Us</a></li> -->
+
+          <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<body>
+
+    <h2 class="clz">View Specific child's motor skills</h2><br>
+    {%if pred == 1%}
+    <h2 style="text-align:center;font-family:tahoma">TITLE</h2>
+    <h3 style="color:red;text-align:center">Model Suggest  as ATypical child</h3><br>
+    {%endif%}
+    {%if pred == 0%}
+    <h3 style="color:green;text-align:center">Model Suggest Typical child</h3><br>
+    {%endif%}
+    <!-- <table id="cust" class="table table-hover table-dark">
+        <thead>
+        <tr>
+            <th>cid</th>
+            <th>acx</th>
+            <th>acy</th>
+            <th>acz</th>
+            <th>gyx</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for row in items %}
+        <tr>
+            <td>{{row.cid}}</td>
+            <td>{{row.acx}}</td>
+            <td>{{row.acy}}</td>
+            <td>{{row.acz}}</td>
+            <td>{{row.gyx}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table> -->
+
+    <!-- <a href="/home">Navigate to Home page</a> -->
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>-->
+
+<script>
+        $(document).ready( function () {
+            $('#cust').DataTable();
+        });
+</script>
+
+<script>
+    $(document).ready(function mean() { 
+        
+        var i;
+        
+        var val=0;
+        
+        var sum = 0;
+       
+        var len = acx.length; 
+        alert("hii");
+
+        for (i = 0; i < len; i++) { 
+            sum = row[i]+1; 
+        } 
+        val=sum / len;
+        alert(val);
+        
+        document.write(val);
+        return val;
+    });
+</script>
+</body>
+
+</html>

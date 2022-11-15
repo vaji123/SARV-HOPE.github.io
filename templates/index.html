@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="static/styles.min.css">
+</head>
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">SARV HOPE</a></h1>
+
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="/home">Home</a></li>
+          <li><a class="nav-link scrollto" href="/view_all_children">View All Children</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#Literature_Survey">Literature Survey</a></li> -->
+          <li><a class="nav-link scrollto active" href="/index">Child Registration</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#Research_Problem">Research Problem</a></li> -->
+          <li><a class="nav-link scrollto" href="/visualization">Data Visualization</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#Sub_objective">Sub objective</a></li> -->
+          <li><a class="nav-link scrollto" href="/Doc_All">Registered Doctors</a></li>
+          <!-- <li><a class="nav-link scrollto" href="">About Us</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="">Contact Us</a></li> -->
+
+          <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+<body>
+    <h2 class="clz">Child Registration</h2><br>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+            <!-- <div class="container"><a class="navbar-brand" href="#" style="color:#aedc8a;"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+
+                    <div 
+                    class="collapse navbar-collapse" id="navcol-1"><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="{{url_for('view')}}" style="background-color:#aedc8a;">view</a></span></div>
+                    <div 
+                    class="collapse navbar-collapse" id="navcol-1"><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="{{url_for('visualization')}}" style="background-color:#aedc8a;">Visualization</a></span></div>
+                    <div 
+                    class="collapse navbar-collapse" id="navcol-1"><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="{{url_for('view_all_children')}}" style="background-color:#aedc8a;">View All Children</a></span></div>
+                    <div 
+                    class="collapse navbar-collapse" id="navcol-1"><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="{{url_for('Doc_signup')}}" style="background-color:#aedc8a;">Doctor Sign up</a></span></div>
+                    <div 
+                    class="collapse navbar-collapse" id="navcol-1"><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="{{url_for('Doc_login')}}" style="background-color:#aedc8a;">Doctor Login</a></span></div>
+                    <div 
+                    class="collapse navbar-collapse" id="navcol-1"><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="{{url_for('Doc_All')}}" style="background-color:#aedc8a;">View All Doctors</a></span></div>
+    </div> -->
+    </nav>
+    </div>
+    <div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder"></div>
+            <form method="post" action = "/signup">
+                <h2 class="text-center"><strong>Create</strong> an account.</h2>
+                <div class="form-group"><input class="form-control" type="text" name="childID" placeholder="childID" required></div>
+                <div class="form-group"><input class="form-control" type="text" name="child_Name" placeholder="Child Name " required></div>
+                <div class="form-group"><input class="form-control" type="text" name="Age" placeholder="Age" required></div>
+                <div class="form-group"><input class="form-control" name = "BirthDate" placeholder="Birth Date" type="text" onfocus="(this.type='date')" id="BirthDate"></div>
+                <div class="form-group"><input class="form-control" type="text" name="Gender" placeholder="Gender" required></div>
+                <div class="form-group"><input class="form-control" type="text" name="Gurdian_Name" placeholder="Guardian Name" required></div>
+                <div class="form-group"><input class="form-control" type="text" name="Gurdian_Address" placeholder="Guardian Address" required></div>
+                <div class="form-group"><input class="form-control" type="text" name="Gurdian_Contact" placeholder="Guardian Contact No" required></div>
+                
+                
+                <!--<div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password "></div>-->
+                <div class="form-group">
+                    <div class="form-check">
+                        <label class="form-check-label"><input class="form-check-input" type="checkbox">I agree to the license terms.</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                <input type="submit" name="submit" value="Sign up" class="btn btn-primary btn-block" style="background-color:#aedc8a;color:rgb(40,140,38);">
+                 </div>
+                <a href="/login" class="already">You already have an account? Login here.</a>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+</body>
+<a href="/home">Navigate to Home page</a>
+</html>

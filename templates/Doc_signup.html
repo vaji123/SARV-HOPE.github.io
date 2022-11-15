@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="static/styles.min.css">
+</head>
+
+
+<body>
+    <h2 class="clz">Doctor Signup</h2><br>
+    <div>
+
+    </div>
+    <div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder1"></div>
+            <form method="post" action = "/signup_doc">
+                <h2 class="text-center"><strong>Create</strong> an account.</h2>
+                <div class="form-group"><input class="form-control" type="text" name="Emp_no" placeholder="Emp_no" required></div>
+                <div class="form-group"><input class="form-control" type="text" name="Name" placeholder="Name" required></div>
+                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></div>
+                <div class="form-group"><input class="form-control" type="text" name="Specialization" placeholder="Specialization" required></div>
+                <div class="form-group"><input class="form-control" type="text" name="contact_no" placeholder="contact_no" required></div>
+                <div class="form-group"><input class="form-control" type="text" name="Address" placeholder="Address" required></div>
+
+                
+                <!--<div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password "></div>-->
+                <div class="form-group">
+                    <div class="form-check">
+                        <label class="form-check-label"><input class="form-check-input" type="checkbox">I agree to the license terms.</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                <input type="submit" name="submit" value="Sign up" class="btn btn-primary btn-block" style="background-color:#aedc8a;color:rgb(40,140,38);">
+                 </div>
+                <!-- <a href="/" class="already">You already have an account? Login here.</a> -->
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+</body>
+
+</html>

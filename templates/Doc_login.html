@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="static/styles.min.css">
+</head>
+
+
+<body>
+    <h2 class="clz">Welcome to SARV HOPE</h2><br>
+    <div>
+
+    </div>
+    <div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder2"></div>
+            <form method="post" action = "/check_docs">
+                <h2 class="text-center"><strong>Login</strong> to an account.</h2><br>
+                <div class="form-group"><input class="form-control" type="text" name="Emp_no" placeholder="Emp_no" required></div><br>
+                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></div>               
+                 
+                <div class="form-group">
+                <input type="submit" name="submit" value="Log In" class="btn btn-primary btn-block" style="background-color:#aedc8a;color:rgb(40,140,38); height: 60px; font-size: 24px;">
+                 </div>
+                <a href="/Doc_signup" class="already">Don't you have an account? sign Up here.</a>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+</body>
+
+</html>

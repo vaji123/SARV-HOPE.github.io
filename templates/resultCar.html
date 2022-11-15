@@ -1,0 +1,132 @@
+<!doctype html> 
+<html> 
+<head><link rel="stylesheet" href="static/styles.min.css">
+    <script src=
+    "https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js">
+    </script>
+</head>
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">SARV HOPE</a></h1>
+
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="">Home</a></li>
+          <li><a class="nav-link scrollto" href="/view_all_children">View All Children</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#Literature_Survey">Literature Survey</a></li> -->
+          <li><a class="nav-link scrollto " href="/index">Child Registration</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#Research_Problem">Research Problem</a></li> -->
+          <li><a class="nav-link scrollto" href="/visualization">Data Visualization</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#Sub_objective">Sub objective</a></li> -->
+          <li><a class="nav-link scrollto" href="/Doc_All">Registered Doctors</a></li>
+          <!-- <li><a class="nav-link scrollto" href="">About Us</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="">Contact Us</a></li> -->
+
+          <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+   <body> 
+        
+       <div class="heading2" >
+        <h1 class heading2>Analyzing Motor Skills using Toy Car</h1>
+       </div>  
+       
+       <div class="childD"> 
+       
+       <p>Child ID : <span id = 'cid'></span><br></p>
+       <p>Child Name : <span id = 'c_name'></span><br></p>
+       <p>Age : <span id = 'age'></span><br></p>
+       <p>Gender : <span id = 'gender'></span><br></p>
+       <p>Guardian Name : <span id = 'g_name'></span><br></p>
+       <p>Guardian Contact No : <span id = 'contact'></span><br></p>
+       <p>Address : <span id = 'address'></span><br></p>
+       </div>
+       <div class = "prediction"> 
+       <h1> {{ prediction }}</h1> 
+       </div>
+       <script>
+        const api_url = 'https://xoax5aram8.execute-api.ap-south-1.amazonaws.com/ch/child?childID={{id}}'
+        const api_url2='https://0d8p49x2jb.execute-api.ap-south-1.amazonaws.com/ch/carforward'
+        async function getChild(){
+            const response = await fetch(api_url);
+            const data = await response.json();
+            const{Gurdian_Contact,Gender,Gurdian_Name,Gurdian_Address,Age,child_Name,childID} = data;
+            console.log(Gurdian_Contact);
+            console.log(Gurdian_Name);
+            console.log(Gurdian_Address);
+            console.log(Age);
+            console.log(Gender);
+            console.log(child_Name);
+            console.log(childID);
+
+            document.getElementById('cid').textContent=childID;
+            document.getElementById('c_name').textContent=child_Name;
+            document.getElementById('age').textContent=Age;
+            document.getElementById('gender').textContent=Gender;
+            document.getElementById('g_name').textContent=Gurdian_Name;
+            document.getElementById('contact').textContent=Gurdian_Contact;
+            document.getElementById('address').textContent=Gurdian_Address;
+
+
+        }
+        getChild();
+
+
+        async function getToyData(){
+            const response = await fetch(api_url2);
+            const data = await response.json();
+            // console.log(data)
+            
+            const data2 = data.filter(function(item){
+             return item.cid == "{{id}}";         
+             });
+             const data3 =data2.filter(function(item){
+            return item.Activity == "Forward";         
+            });
+            // const dtable = console.table(data) 
+        //     var firstSeriesData = dtable.mapAs({x:4 , value: 7});
+        //     // create a line chart4
+        //    var chart = anychart.line();
+
+        //     // create the series and name them
+        //     var firstSeries = chart.line(firstSeriesData);
+        //     firstSeries.name("Roger Federer");
+        //     // add a legend
+        //     chart.legend().enabled(true);
+  
+        //     // add a title
+        //     chart.title("Big Three's Grand Slam Title Race");
+
+        //     // specify where to display the chart
+        //     // chart.container("container");
+
+        //     // draw the resulting chart
+        //     chart.draw();
+
+
+        }
+        getToyData();
+
+    //     anychart.onDocumentReady(function() {
+    // // The main JS line charting code will be here.
+            
+
+    //     });
+
+
+
+
+
+
+       </script>
+        
+   </body> 
+</html> 
